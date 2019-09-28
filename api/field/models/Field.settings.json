@@ -1,0 +1,49 @@
+{
+  "connection": "default",
+  "collectionName": "fields",
+  "info": {
+    "name": "field",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "required": {
+      "type": "boolean"
+    },
+    "min": {
+      "type": "integer",
+      "default": "0"
+    },
+    "max": {
+      "type": "integer",
+      "default": "255"
+    },
+    "type": {
+      "enum": [
+        "text",
+        "select"
+      ],
+      "type": "enumeration"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "forms": {
+      "collection": "form",
+      "via": "fields"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

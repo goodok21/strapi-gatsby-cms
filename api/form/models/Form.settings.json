@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "forms",
+  "info": {
+    "name": "form",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "posts": {
+      "collection": "post",
+      "via": "forms"
+    },
+    "fields": {
+      "collection": "field",
+      "dominant": true,
+      "via": "forms"
+    }
+  }
+}
